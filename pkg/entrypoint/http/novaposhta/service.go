@@ -49,9 +49,9 @@ func (s *Service) GetAreas(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusAccepted)
 
 	functionResponse := map[string]interface{}{"data": resp.Data}
-	err2 := json.NewEncoder(w).Encode(functionResponse)
-	if err2 != nil {
-		panic(err2.Error())
+	err = json.NewEncoder(w).Encode(functionResponse)
+	if err != nil {
+		panic(err.Error())
 	}
 }
 
@@ -81,9 +81,9 @@ func (s *Service) GetCitiesOnline(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusAccepted)
 
 	functionResponse := map[string]interface{}{"data": resp}
-	err2 := json.NewEncoder(w).Encode(functionResponse)
-	if err2 != nil {
-		panic(err2.Error())
+	err = json.NewEncoder(w).Encode(functionResponse)
+	if err != nil {
+		panic(err.Error())
 	}
 }
 
@@ -113,8 +113,8 @@ func (s *Service) GetWarehouses(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusAccepted)
 
 	functionResponse := map[string]interface{}{"data": resp}
-	err2 := json.NewEncoder(w).Encode(functionResponse)
-	if err2 != nil {
-		panic(err2.Error())
+	err = json.NewEncoder(w).Encode(functionResponse)
+	if err != nil {
+		panic(err.Error())
 	}
 }
