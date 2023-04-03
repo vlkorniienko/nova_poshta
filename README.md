@@ -1,6 +1,6 @@
 # Nova Poshta API Service
 
-This project is a Golang service that handles requests to the Nova Poshta API. This project is intended to be a starting point for developers who want to interact with the Nova Poshta API using Golang. Currently, the project only handles a few requests, so you can add more functionality as needed.
+This project is a Golang service that handles requests to the Nova Poshta API. Nova Poshta is a private postal and logistics company based in Ukraine. This project is intended to be a starting point for developers who want to interact with the Nova Poshta API using Golang. Currently, the project only handles a few requests, so you can add more functionality as needed.
 
 You will need to add to .env file your API key:
 NOVA_POSHTA_API_KEY=your-nova-poshta-api-key
