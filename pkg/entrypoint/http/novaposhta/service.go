@@ -55,13 +55,13 @@ func (s *Service) GetAreas(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
-type CityRequest struct {
+type cityRequest struct {
 	City  string `json:"city"`
 	Limit int    `json:"limit"`
 }
 
 func (s *Service) GetCitiesOnline(w http.ResponseWriter, r *http.Request) {
-	var cityInfo CityRequest
+	var cityInfo cityRequest
 	err := json.NewDecoder(r.Body).Decode(&cityInfo)
 	if err != nil {
 		response.RespondError(w, http.StatusBadRequest,
@@ -87,13 +87,13 @@ func (s *Service) GetCitiesOnline(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-type WarehousesRequest struct {
+type warehousesRequest struct {
 	CityRef string `json:"city_ref"`
 	Limit   int    `json:"limit"`
 }
 
 func (s *Service) GetWarehouses(w http.ResponseWriter, r *http.Request) {
-	var wareHouseInfo WarehousesRequest
+	var wareHouseInfo warehousesRequest
 	err := json.NewDecoder(r.Body).Decode(&wareHouseInfo)
 	if err != nil {
 		response.RespondError(w, http.StatusBadRequest,
